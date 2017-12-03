@@ -24,8 +24,8 @@
     "gulp-uglify": "^2.0.0",
     "jshint": "^2.9.4"
   },
-  "dependencies": { 
+  "dependencies": {
     "gulp-ng-annotate": "^2.0.0",
-    "ng-annotate": "^1.2.2" 
+    "ng-annotate": "^1.2.2"
   }
 }

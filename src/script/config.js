@@ -1,10 +1,10 @@
-var baseUrl = "http://dvlp.api.rtf365.com/";
+var baseUrl = "http://test.api.rtf365.com/";
 //var baseUrl = "http://test.api.rtf365.com/";
 
-var chatLog = "http://dvlp.emchat.rtf365.com/service/emchat/logs/";
+var chatLog = "http://test.emchat.rtf365.com/service/emchat/logs/";
 //var chatLog = "http://test.emchat.rtf365.com/service/emchat/logs/";
 
-var baseImgUrl = "http://dvlp.img.rtf365.com/";
+var baseImgUrl = "http://test.img.rtf365.com/";
 //var baseImgUrl = "http://test.img.rtf365.com/";
 var Config = {
 	//请求路径

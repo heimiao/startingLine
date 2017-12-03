@@ -1,0 +1,148 @@
+//导入模块样式
+@import "../mixins";
+@import "../mixins/button";
+.index-css {
+    width: 100%;
+    .index-top {
+        width: 100%;
+        line-height: 30px;
+        height: 30px;
+        background: #f6f6f6;
+        .injoin {
+            >a {
+                color: #131313;
+                display: inline-block;
+                margin: 0 5px;
+            }
+        }
+    }
+    .top-container {
+        .logo,
+        .erweima {
+            width: 20%;
+            padding-top: 20px;
+            text-align: center;
+        }
+        .search {
+            width: 60%;
+            .searchCont {
+                width: 80%;
+                margin: 25px auto 10px;
+                .input-search {
+                    border: 1px solid #1184e1;
+                    input {
+                        border: 0;
+                        width: 89.3%;
+                        &:active,
+                        &:focus {
+                            outline: none;
+                            border-color: #cfdc00;
+                            @include shadow(0 0 5px rgba(207, 220, 0, 0.4));
+                        }
+                        display: inline-block;
+                    }
+                    .button {
+                        width: 10%;
+                        line-height: 35px;
+                        margin-top: 0;
+                        text-align: center;
+                        background: #1184e1;
+                        cursor: pointer;
+                        color: #fff;
+                        display: inline-block;
+                        border: 0;
+                    }
+                }
+                .search-label {
+                    margin-top: 5px;
+                    >a {
+                        display: inline-block;
+                        color: #888;
+                        margin-right: 10px;
+                        &:hover {
+                            color: red;
+                        }
+                    }
+                    .active {
+                        color: red;
+                    }
+                }
+            }
+        }
+        .erweima {
+            padding-top: 8px;
+        }
+    }
+    .nav {
+        width: 100%;
+        border: 1px solid red;
+        .col-nav {
+            width: 20%;
+            background: #1184E1;
+            @include opacity(90);
+            .type {
+                position: relative;
+                width: 100%;
+                >a {
+                    padding: 15px 0;
+                    color: #fff;
+                    font-size: 16px;
+                    display: inline-block;
+                }
+                >ul {
+                   position: relative;
+                    width: 100%;
+                    position: absolute;
+                    padding: 0 15px 15px;
+                    margin: 0;
+                    color: #fff;
+                    list-style-type: none;
+                    >li {
+                        >dl {
+                            dt {
+                                color: #fff;
+                            }
+                            dd {
+                                >a {
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .row-nav {
+            width: 80%;
+            >ul {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+                >li {
+                    float: left;
+                    >a {
+                        padding: 15px;
+                        color: #000;
+                        font-size: 16px;
+                        display: inline-block;
+                        &:hover {
+                            color: #FF2C55;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .my-container {
+        margin: 0 auto;
+        border: 1px solid red;
+        width: 1024px;
+    }
+    .banner {
+        width: 100%;
+        >img {
+            max-width: 100%;
+        }
+    }
+}
