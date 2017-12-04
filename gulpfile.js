@@ -17,8 +17,7 @@ var gulp = require('gulp'), //导入gulp
 	glp_rename = require('gulp-rename'),
 	glp_ngAnnotate = require('gulp-ng-annotate'),
 	//	sourcemaps = require('gulp-sourcemaps'),
-	//防止sass错误造成gulp停止
-	plumber = require('gulp-plumber'),
+	//防止sass错误造成gulp停止 
 	paths = {
 		root: './',
 		dist: {
@@ -46,10 +45,10 @@ gulp.task('clean', function(cb) {
 //样式生成
 gulp.task('less', function(cb) {
 	return gulp.src(paths.source.less + '/**/index_less.less')
-		.pipe(plumber())
-		.pipe(glp_less())
 		.pipe(glp_plumber())
-		.pipe(gulp.dest(paths.dist.styles))
+		.pipe(glp_less())
+
+	.pipe(gulp.dest(paths.dist.styles))
 		.pipe(glp_minicss())
 		.pipe(glp_rename({
 			suffix: '.min'
@@ -58,11 +57,10 @@ gulp.task('less', function(cb) {
 });
 gulp.task('sass', function(cb) {
 	return gulp.src(paths.source.sass + '/**/*.scss')
-		.pipe(plumber())
+		.pipe(glp_plumber())
 		.pipe(glp_sass())
 		.pipe(gulp.dest(paths.dist.styles))
 		.pipe(glp_minicss())
-		.pipe(glp_plumber())
 		.pipe(glp_rename({
 			suffix: '.min'
 		}))
@@ -70,11 +68,10 @@ gulp.task('sass', function(cb) {
 });
 //js生成
 gulp.task('js', function(cb) {
-	return gulp.src(paths.source.scripts + '/**/*.js')
+	return gulp.src(paths.source.scripts + '/**/*.js').pipe(glp_plumber())
 		.pipe(glp_ngAnnotate())
 		.pipe(glp_jshint())
 		.pipe(glp_concat("all.js"))
-		.pipe(glp_plumber())
 		.pipe(gulp.dest(paths.dist.scripts))
 		.pipe(glp_uglify())
 		.pipe(glp_rename({
