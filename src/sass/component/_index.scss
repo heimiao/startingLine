@@ -1,6 +1,11 @@
 //导入模块样式
 @import "../mixins";
 @import "../mixins/button";
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
 .index-css {
     width: 100%;
     .index-top {
@@ -91,13 +96,12 @@
                 >ul {
                     width: 100%;
                     position: absolute;
-                    margin: 0;
-                    padding: 0;
                     color: #fff;
                     @include opacity(90);
                     background: #1178c4;
                     list-style-type: none;
                     z-index: 1;
+                    min-height: 371px;
                     >li {
                         padding-left: 15px;
                         height: 67px;
@@ -126,8 +130,6 @@
             width: 80%;
             >ul {
                 width: 100%;
-                padding: 0;
-                margin: 0;
                 list-style-type: none;
                 >li {
                     float: left;
@@ -226,6 +228,90 @@
                 width: 100%;
                 margin: 10px 0;
                 border: 1px dashed grey;
+            }
+        }
+    }
+    .link {
+        ul {
+            list-style-type: none;
+            border: 1px solid red;
+            >li {
+                width: 20%;
+                float: left;
+                overflow: hidden;
+                min-height: 101px;
+                >a {
+                    display: inline-block;
+                    padding: 10px 10px 0;
+                }
+                &:first-child {
+                    @include opacity(90);
+                    background: #1178c4;
+                }
+            }
+        }
+        &:after {
+            clear: both;
+            display: table;
+            content: "";
+        }
+    }
+    .countPanel {
+        .panel {
+            .panel-head {
+                border: 1px solid red;
+                h3,
+                .nav-link {
+                    display: inline-block;
+                    width: 74%;
+                    padding-left: 7px;
+                    >a {
+                        color: #000;
+                        font-size: 17px;
+                        display: inline-block;
+                        margin: 0 15px;
+                        &:hover,
+                        .active {
+                            color: #117ad0;
+                        }
+                    }
+                }
+                h3 {
+                    width: 25%;
+                    padding-left: 11px;
+                    background: red;
+                }
+            }
+            .panel-body {
+                padding: 0;
+                .cover,
+                .record {
+                    width: 25%;
+                    background: blue;
+                }
+                .class {
+                    width: 55%;
+                    background: yello;
+                    >ul {
+                        overflow: hidden;
+                        padding-left: 15px;
+                        li {
+                            float: left;
+                            width: 33%;
+                            padding: 0 7px;
+                            dl {
+                                width: 100%;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .record {
+                    width: 20%;
+                    background: blue;
+                }
             }
         }
     }
