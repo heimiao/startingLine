@@ -79,8 +79,7 @@ ul {
         }
     }
     .nav {
-        width: 100%;
-        border: 1px solid red;
+        width: 100%; //      border: 1px solid red;
         .col-nav {
             width: 20%;
             background: #1184E1;
@@ -147,8 +146,7 @@ ul {
         }
     }
     .my-container {
-        margin: 0 auto;
-        border: 1px solid red;
+        margin: 0 auto; //      border: 1px solid red;
         width: 1024px;
     }
     .banner {
@@ -227,14 +225,13 @@ ul {
                 height: 0;
                 width: 100%;
                 margin: 10px 0;
-                border: 1px dashed grey;
+                border: 1px dashed #C8C8C8;
             }
         }
     }
     .link {
         ul {
-            list-style-type: none;
-            border: 1px solid red;
+            list-style-type: none; //          border: 1px solid red;
             >li {
                 width: 20%;
                 float: left;
@@ -257,9 +254,10 @@ ul {
         }
     }
     .countPanel {
+        margin-top: 30px;
         .panel {
             .panel-head {
-                border: 1px solid red;
+                //              border: 1px solid red;
                 h3,
                 .nav-link {
                     display: inline-block;
@@ -271,7 +269,7 @@ ul {
                         display: inline-block;
                         margin: 0 15px;
                         &:hover,
-                        .active {
+                        &.active {
                             color: #117ad0;
                         }
                     }
@@ -279,18 +277,26 @@ ul {
                 h3 {
                     width: 25%;
                     padding-left: 11px;
-                    background: red;
+                    margin-top: 10px;
                 }
             }
             .panel-body {
                 padding: 0;
+                border-top: 1px solid #C8C8C8;
                 .cover,
                 .record {
                     width: 25%;
-                    background: blue;
+                    padding-top: 21px;
+                }
+                .cover {
+                    border-right: 1px solid #C8C8C8;
+                    text-align: center;
+                    img {
+                        width: 86%;
+                    }
                 }
                 .class {
-                    width: 55%;
+                    width: 57%;
                     background: yello;
                     >ul {
                         overflow: hidden;
@@ -298,9 +304,28 @@ ul {
                         li {
                             float: left;
                             width: 33%;
-                            padding: 0 7px;
+                            padding: 0 5px;
+                            margin-top: 21px;
                             dl {
                                 width: 100%;
+                                dd {
+                                    margin-top: 10px;
+                                    font-size: 13px;
+                                    color: #121212;
+                                    p {
+                                        margin-bottom: 5px;
+                                    }
+                                    label {
+                                        display: inline-block;
+                                        padding: 2px;
+                                        font-size: 12px;
+                                        border: 1px solid #f3f3f3;
+                                        color: #999;
+                                    }
+                                    .active {
+                                        color: red;
+                                    }
+                                }
                                 img {
                                     width: 100%;
                                 }
@@ -309,10 +334,111 @@ ul {
                     }
                 }
                 .record {
-                    width: 20%;
-                    background: blue;
+                    width: 18%;
+                    button {
+                        @include btn(100%, 30px,#1184E1);
+                        @include radius(0);
+                    }
+                    .menList {
+                        li {
+                            font-size: 12px;
+                            color: #4f4f4f;
+                            margin-top: 10px;
+                            >span {
+                                display: inline-block;
+                                width: 50%;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                &:first-child {
+                                    width: 15%;
+                                }
+                                &:last-child {
+                                    text-align: right;
+                                    width: 30%;
+                                }
+                            }
+                        }
+                    }
                 }
             }
+        }
+    }
+    .business {
+        margin-top: 30px;
+        .title {
+            >h3 {
+                font-size: 18px;
+                border-left: 2px solid #1184e1;
+                padding-left: 15px;
+                font-weight: bold;
+                small {
+                    margin-left: 5px;
+                    font-size: 12px;
+                }
+            }
+        }
+        ul {
+            margin-top: 25px;
+            li {
+                width: 20%;
+                float: left;
+                text-align: center;
+                h5 {
+                    font-weight: bold;
+                }
+                p {
+                    color: #4f4f4f;
+                }
+            }
+        }
+    }
+    .bottom {
+        .friendlLink {
+            a {
+                display: inline-block;
+                margin: 0 5px;
+            }
+        }
+        hr {
+            height: 2px;
+            background: #106CB9;
+        }
+        .bottomInfo {
+            .bottomlink {
+                width: 60%;
+                float: left;
+                .links {
+                    width: 25%;
+                    float: left;
+                    ul {
+                        li {
+                            list-style-type: disc;
+                            a {
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+            .bottomPhone {
+                width: 40%;
+                float: left;
+                dl {
+                    float: left;
+                    text-align: center;
+                    width: 33%;
+                }
+            }
+        }
+        .copyrightPic,
+        .copyright {
+            clear: both;
+            width: 100%;
+            padding: 5px;
+            display: table;
+            text-align: center;
+            content: "";
         }
     }
 }
